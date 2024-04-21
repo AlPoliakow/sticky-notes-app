@@ -5,10 +5,18 @@
 body {
   margin: 0;
   padding: 0;
+  width:90vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #4da6ff;
+  display: flex;
+  justify-content: center;
+  align-content:center;
+}
 
+aside{
+  display:flex;
+  justify-content:center;
 }
 
 input,
@@ -19,6 +27,7 @@ textarea {
 
 .notes-list {
   display: flex;
+  justify-content:center;
   flex-wrap: wrap;
   padding: 10px;
   margin: 0;
@@ -32,8 +41,9 @@ textarea {
 .app-header__title {
   margin: 10px 20px 0;
   font-family: "Permanent Marker", cursive;
-  width: 60%;
+  width: 100%;
   font-size: 50px;
+  text-align:center;
 }
 
 .app-header__controls {
@@ -65,7 +75,7 @@ textarea {
 
 .note {
   font-family: "Shadows Into Light", cursive;
-  width: 200px;
+  width: 250px;
   height: 200px;
   margin: 10px;
   background-color: lightyellow;
@@ -111,3 +121,4 @@ textarea {
   color: black;
   cursor: pointer;
 }
+
