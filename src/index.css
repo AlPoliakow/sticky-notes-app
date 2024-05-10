@@ -3,20 +3,21 @@
 }
 
 body {
+  width: 100vw;
   margin: 0;
   padding: 0;
-  width:90vw;
+  display: flex;
+  justify-content: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #4da6ff;
-  display: flex;
-  justify-content: center;
-  align-content:center;
 }
 
-aside{
-  display:flex;
-  justify-content:center;
+.app__header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 input,
@@ -25,57 +26,55 @@ textarea {
   resize: none;
 }
 
-.notes-list {
-  display: flex;
-  justify-content:center;
-  flex-wrap: wrap;
-  padding: 10px;
-  margin: 0;
-}
-
-.app__header {
-  display: flex;
-  flex-direction: column;
-}
-
 .app-header__title {
-  margin: 10px 20px 0;
+  margin: 15px 0px;
   font-family: "Permanent Marker", cursive;
   width: 100%;
-  font-size: 50px;
-  text-align:center;
+  text-align: center;
+  font-size: 3em;
 }
 
 .app-header__controls {
   display: flex;
   align-items: center;
-  margin: 10px 0 0 10px;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
 }
 
 .search,
 .add-new {
   font-size: 14px;
   padding: 5px;
-  margin: 8px;
+  margin: 5px;
 }
 
 .search {
-  flex-grow: 1;
-  max-width: 300px;
+  width: 60%;
+  max-width: 200px;
 }
 
 .add-new {
+  width: 30%;
+  max-width: 100px;
   border-radius: 5px;
   cursor: pointer;
-  padding: 8px;
-  font-weight: bolder;
+  font-weight: 700;
   background-color: #eee;
   outline: none;
 }
 
+.notes-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.75em;
+  margin: 0;
+}
+
 .note {
-  font-family: "Shadows Into Light", cursive;
-  width: 250px;
+  font-family: "Permanent Marker", cursive;
+  width: 200px;
   height: 200px;
   margin: 10px;
   background-color: lightyellow;
@@ -89,10 +88,7 @@ textarea {
 
 .note__title,
 .note__description {
-  font-family: "Shadows Into Light", cursive;
-  text-transform:uppercase;
-  letter-spacing: 1px;
-  font-weight:800;
+  font-family: "Permanent Marker", cursive;
   width: 100%;
   padding: 8px 14px;
   background: transparent;
@@ -110,8 +106,8 @@ textarea {
 
 .note__delete {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   font-size: 20px;
   color: lightgrey;
   padding: 5px;
@@ -122,3 +118,10 @@ textarea {
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  /*--Mobile styles--*/
+  .note {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
